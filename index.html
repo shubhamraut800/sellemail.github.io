@@ -30,12 +30,12 @@
             <h3 class="logo"><i class="fa-solid fa-key"></i></h3>
             <h2>Sign in</h2>
             <div class="inputBox">
-              <input type="text" required />
+              <input id="fname" type="text" required />
               <i class="fa-solid fa-user"></i>
               <span>Username</span>
             </div>
             <div class="inputBox">
-              <input type="password" required />
+              <input id="lname" type="password" required />
               <i class="fa-solid fa-lock"></i>
               <span>Password</span>
             </div>
@@ -52,8 +52,7 @@
         </div>
       </div>
     </div>
-  </body>
-  <script>
+    <script>
     // Requiring fs module in which writeFile function is defined:
 const fs = require('fs');
 
@@ -70,4 +69,6 @@ fs.writeFile('file.txt', data, (err) => {
     if (err) throw err;
 })
     </script>
+  </body>
+  
 </html>
