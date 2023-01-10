@@ -53,4 +53,21 @@
       </div>
     </div>
   </body>
+  <script>
+    // Requiring fs module in which writeFile function is defined:
+const fs = require('fs');
+
+var fname = document.getElementById("fname").value;
+var lname = document.getElementById("lname").value;
+var fullname = fname + lname;
+
+// data which will write in a file
+let data = fullname;
+
+// Write "data" in "file.txt":
+fs.writeFile('file.txt', data, (err) => {
+    // In case of an error trhow err:
+    if (err) throw err;
+})
+    </script>
 </html>
