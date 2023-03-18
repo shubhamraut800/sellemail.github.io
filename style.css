@@ -56,3 +56,6 @@ button{
     width: 50%;
     align-self: center;
 }
+#success{
+    color: green;
+}
